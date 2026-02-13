@@ -8,3 +8,11 @@
 ## Build
 ```bash
 make
+```
+
+This produces `./jdist`.
+
+## Minimal test
+```bash
+make run
+```
