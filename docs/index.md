@@ -7,9 +7,24 @@ GPU-accelerated exact Jaccard distances for genome-wide comparison.
 - Paper excerpt: [paper](paper.md)
 - Supplementary figures: [figures](figures.md)
 
-## Citation
-If you use **jdist**, please cite:
-- Torres RC, Meléndez-Sánchez D, Torres J, Almaguer D. *jdist: GPU-accelerated exact Jaccard distances for scalable genome-wide comparison.* (manuscript in preparation).
+# Installation
+
+## Dependencies
+- C++17 compiler
+- OpenMP
+- OpenCL headers + runtime (GPU optional; CPU OpenCL fallback supported)
+
+## Build
+```bash
+make
+```
+
+This produces `./jdist`.
+
+## Minimal test
+```bash
+make run
+```
 
 # Usage
 
@@ -42,3 +57,7 @@ d = 1 - \\frac{|A \\cap B|}{|A \\cup B|}
 ## Notes
 - Empty samples (all zeros) are automatically filtered.
 - If a GPU is unavailable, the program falls back to a CPU OpenCL device.
+
+## Citation
+If you use **jdist**, please cite:
+- Torres RC, Meléndez-Sánchez D, Torres J, Almaguer D. *jdist: GPU-accelerated exact Jaccard distances for scalable genome-wide comparison.* (manuscript in preparation).
