@@ -150,6 +150,7 @@ Supplementary benchmarking figures are available:
 ## Limitations
 
 - Memory usage scales with number of features.
+	Filtering extremely rare variants is recommended, as they often contribute little to global similarity estimates while substantially increasing computational cost.
 - Generation of presence/absence matrices is external to the software.
 
 ---
@@ -166,7 +167,7 @@ Manuscript in preparation.
 
 ## Contact
 
-Roberto C. Torres  
+Roberto C. Torres, PhD.
 Medical Research Unit on Infectious and Parasitic Diseases (UIMEIP)  
 Instituto Mexicano del Seguro Social (IMSS)
 Mexico City, Mexico
