@@ -170,6 +170,6 @@ Manuscript in preparation.
 
 Roberto C. Torres, PhD.
 
-Medical Research Unit on Infectious and Parasitic Diseases (UIMEIP)  
-Instituto Mexicano del Seguro Social (IMSS)
-Mexico City, Mexico
+Medical Research Unit on Infectious and Parasitic Diseases (UIMEIP)<br>
+Instituto Mexicano del Seguro Social (IMSS)<br>
+Mexico City, Mexico<br>
