@@ -126,9 +126,9 @@ Feature vectors are packed into 64-bit words and compared using bitwise AND/OR o
 
 ---
 
-## Supplementary figures
+## Figures
 
-Supplementary benchmarking figures are available:
+Benchmarking figures are available:
 
 - Fig. S1 — Rank-ordered distance overlay  
   [PDF](assets/pdf/10_rank_refdist_overlay.pdf)
@@ -150,7 +150,8 @@ Supplementary benchmarking figures are available:
 ## Limitations
 
 - Memory usage scales with number of features.
-	Filtering extremely rare variants is recommended, as they often contribute little to global similarity estimates while substantially increasing computational cost.
+
+     Filtering extremely rare variants is recommended, as they often contribute little to global similarity estimates while substantially increasing computational cost.
 - Generation of presence/absence matrices is external to the software.
 
 ---
@@ -168,6 +169,7 @@ Manuscript in preparation.
 ## Contact
 
 Roberto C. Torres, PhD.
+
 Medical Research Unit on Infectious and Parasitic Diseases (UIMEIP)  
 Instituto Mexicano del Seguro Social (IMSS)
 Mexico City, Mexico
