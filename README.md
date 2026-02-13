@@ -1,28 +1,77 @@
- jdist
+# jdist
 
-**jdist** computes exact Jaccard distances between genomes or samples using
-binary presence/absence matrices of genomic features, with GPU acceleration
-(OpenCL) for scalable all-versus-all comparisons.
+**jdist** computes **exact Jaccard distances** between genomes (or any samples) from binary feature presence/absence matrices using hybrid **CPU + GPU (OpenCL)** acceleration.
+
+The tool is intended for analyses requiring genome-wide resolution without relying on heuristic sketching methods, while remaining computationally scalable.
 
 ## Features
-- Exact Jaccard distance (no sketching)
-- GPU-accelerated via OpenCL; CPU fallback if GPU is unavailable
-- Works with any binary feature matrix (unitigs recommended)
 
-## Input
-Tab-delimited matrix: rows = features, columns = genomes/samples, values = 0/1.
+- Exact Jaccard distances (no sketching)
+- Genome-wide feature support (unitigs, k-mers, genes, etc.)
+- GPU acceleration via OpenCL
+- CPU fallback when GPU is unavailable
+- Scales to large genome collections
 
-## Output
-Tab-delimited symmetric distance matrix with sample IDs as row/column headers.
+## Installation
 
-## Compilation
-g++ -O3 -fopenmp src/jdist.cpp -lOpenCL -o jdist
+### Requirements
+- C++17 compiler
+- OpenMP support
+- OpenCL headers and runtime
+
+### Build
+```bash
+git clone https://github.com/BioinfoLab-UIMEIP/jdist
+cd jdist
+make
+```
+
+Binary produced:
+```
+./jdist
+```
 
 ## Usage
-./jdist input_matrix.tsv output_distances.tsv [num_threads]
+
+```bash
+./jdist <input.tsv> <output.tsv> [threads]
+```
+
+Example:
+```bash
+./jdist example.tsv distances.tsv 8
+```
+
+Input must be a tab-delimited binary presence/absence matrix:
+
+- Rows: genomic features
+- Columns: genomes/samples
+- Values: 0/1
+- First column: feature IDs
+- First row: sample IDs
+
+Output is a symmetric distance matrix ready for clustering or phylogenetic workflows.
+
+## Method summary
+
+Feature vectors are packed into 64‑bit words and compared using bitwise AND/OR operations and population counts. Pairwise comparisons are parallelized using CPU multithreading and GPU OpenCL kernels, enabling efficient all-versus-all distance computation.
 
 ## Citation
-Torres RC et al. jdist: GPU-accelerated exact Jaccard distances for scalable genome-wide comparison. (in preparation)
+
+If you use **jdist**, please cite:
+
+Torres RC, Meléndez-Sánchez D, Almaguer D, Torres J.  
+*jdist: Exact Jaccard genome distances using GPU acceleration.*  
+Manuscript in preparation.
 
 ## License
-MIT License.
+
+Released under the MIT License.
+
+## Contact
+
+Roberto C. Torres  
+Medical Research Unit on Infectious and Parasitic Diseases (UIMEIP)  
+Instituto Mexicano del Seguro Social (IMSS)
+Mexico City, Mexico
+
