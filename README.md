@@ -54,10 +54,6 @@ Input must be a tab-delimited binary presence/absence matrix:
 
 Output is a symmetric distance matrix ready for clustering or phylogenetic workflows.
 
-## Method summary
-
-Feature vectors are packed into 64‑bit words and compared using bitwise AND/OR operations and population counts. Pairwise comparisons are parallelized using CPU multithreading and GPU OpenCL kernels, enabling efficient all-versus-all distance computation.
-
 ## Citation
 
 If you use **jdist**, please cite:
