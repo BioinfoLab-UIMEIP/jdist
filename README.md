@@ -1,5 +1,7 @@
 # jdist
 
+🌐 Documentation / GitHub Pages: https://bioinfolab-uimeip.github.io/jdist/
+
 **jdist** computes **exact Jaccard distances** between genomes (or any samples) from binary feature presence/absence matrices using hybrid **CPU + GPU (OpenCL)** acceleration.
 
 The tool is intended for analyses requiring genome-wide resolution without relying on heuristic sketching methods, while remaining computationally scalable.
