@@ -4,12 +4,6 @@ message: "If you use this software, please cite the associated publication."
 authors:
   - family-names: Torres
     given-names: Roberto C.
-  - family-names: Meléndez-Sánchez
-    given-names: Daniela
-  - family-names: Almaguer-Molina
-    given-names: David
-  - family-names: Torres
-    given-names: Javier
 date-released: 2026
-repository-code: "https://github.com/TorresRC/jdist"
+repository-code: "https://github.com/BioinfoLab-UIMEIP/jdist.git"
 license: MIT
