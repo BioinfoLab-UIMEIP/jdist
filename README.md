@@ -58,7 +58,7 @@ Output is a symmetric distance matrix ready for clustering or phylogenetic workf
 
 If you use **jdist**, please cite:
 
-Torres RC, Meléndez-Sánchez D, Almaguer D, Torres J.  
+Torres RC  
 *jdist: Exact Jaccard genome distances using GPU acceleration.*  
 Manuscript in preparation.
 
